@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authorized
 
   def index
     @recipe = Recipe.where({ category_id: params[:category_id] })
